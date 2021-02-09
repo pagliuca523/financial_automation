@@ -1,0 +1,10 @@
+- create a JSON file:
+    - date == Posted Transactions Date
+    - name == Description1
+    - debit = Debit Amount
+    - credit = Credit Amount
+    - current_balance = Balance
+    - currency = Posted Currency
+
+    - First show a sum of the last month (Debit - Credit)
+    - 
