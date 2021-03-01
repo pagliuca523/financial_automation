@@ -20,7 +20,26 @@ def sum_monthly():
     total_sum_transactions = new_import_db.groupby("Transaction Type").sum()
     print(total_sum_transactions)
 
+def locate_debit():
+    locate_debit_results = new_import_db.loc[lambda row: row["Transaction Type"].str.startswith("D")]
+    #loc_desc = locate_debit_results.describe() #Count, Min, Avg values
+    #results = locate_debit_results.groupby(" Description1").sum()
+    print(locate_debit_results)
+    #print (results)
+
+def locate_credit():
+    locate_credit_results = new_import_db.loc[lambda row: row["Transaction Type"].str.startswith("C")]
+    print(locate_credit_results)
+
+def create_labels():
+    
+    pass
+
+    
 
 create_month_column()
 sum_monthly()
-print(new_import_db)
+locate_debit()
+locate_credit()
+create_labels()
+#print(new_import_db)
